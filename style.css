@@ -44,7 +44,7 @@ body {
 /* ----------------------------------------------------------------------------------------------------------- */
 
 .hero {
-  background-image: url("img/bg-hero.jpg");
+  background-image: url("img/bg-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -69,11 +69,190 @@ body {
 }
 .hero .relasi img {
   margin-right: 12px;
-  max-height: 42px;
+  max-height: 50px;
 }
 .hero .container {
   position: relative;
   z-index: 2;
 }
-.form-templae {
+.form-template input.cv::after {
+  content: "- CV";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+.with-bg {
+  background-image: url("icon/BG\ 1-01.png");
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  padding: 50px 0px;
+}
+.batch-section {
+  font-family: "Roboto", sans-serif;
+}
+.section1 .col-lg-4 {
+  background-color: #9f241f;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 0 18px;
+  width: 220px;
+  height: 200px;
+}
+
+.section2 img {
+  width: 100px;
+}
+
+.section2 .col-12 {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2 span {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.section3 h4,
+.section3 span {
+  color: #9f241f;
+  text-align: center;
+}
+
+.section3 p {
+  font-weight: 500;
+  text-indent: -2.4em;
+}
+
+.section3 .icon {
+  width: 25px;
+}
+
+.sect3-content {
+  margin-left: 70px;
+  /* margin-right: -50px; */
+}
+
+.sect3-content2 {
+  margin-left: 120px;
+}
+
+.section4 h1 {
+  font-size: 48px;
+}
+
+/* .section4 .img-block {
+  width: 350px;
+} */
+
+@media (max-width: 991.9px) {
+  .section1 .col-lg-4 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 16px 12px 0px !important;
+    width: 720px;
+    height: 160px;
+  }
+  .sect3-content {
+    margin-right: 0px;
+  }
+}
+/* --------------------------------------------------------------------------------------------------------- */
+.reason,
+.step {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  padding: 50px 0px;
+  color: #343434;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+.reason img.elemen-kiri,
+.step img.elemen-kiri {
+  position: absolute;
+  max-height: 130px;
+  top: 5%;
+  left: 10%;
+}
+.reason img.elemen-kanan,
+.step img.elemen-kanan {
+  position: absolute;
+  max-height: 130px;
+  top: 5%;
+  right: 10%;
+}
+
+.reason .reasons {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 10px 80px;
+}
+.reason .reasons .item-reason {
+  text-align: center;
+  padding: 10px 25px;
+}
+.reason .reasons .item-reason p {
+}
+.reason .reasons .item-reason img {
+  max-height: 80px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+.target {
+  padding: 100px 0px;
+  font-family: "Roboto", sans-serif;
+  background-image: url("icon/BG\ 1-01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.target .image-target {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.target .image-target img {
+  max-height: 350px;
+  position: absolute;
+  bottom: 0;
+}
+/* ------------------------------------------------------------------------------------------------------------- */
+
+.step .image-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.step .image-list img {
+  position: absolute;
+  bottom: 0;
+}
+.step .image-list img.img-hiasan-1 {
+  min-height: 500px;
+  transform: translateX(-40%) translateY(0%);
+}
+.step .image-list img.img-hiasan-2 {
+  min-height: 500px;
+  transform: translateX(40%) translateY(50%);
+}
+.step .image-list img.img-people {
+  max-height: 250px;
 }
