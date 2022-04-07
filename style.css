@@ -7,11 +7,18 @@
   outline: none;
   color: white;
   font-weight: 500;
+  transition: 0.4s;
+  width: 100%;
 }
 .btn-maroon:hover {
   background-color: white;
   border: 2px solid #9b2721;
   color: #9b2721;
+}
+@media (min-width: 768px) {
+  .btn-maroon {
+    width: auto;
+  }
 }
 
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -24,12 +31,9 @@ body {
   z-index: 999;
   background-color: #9b2721;
   border-radius: 0px 0px 25px 25px;
-  padding: 15px;
   font-family: "Roboto", sans-serif;
 }
-.navbar .navbar-brand img {
-  max-height: 33px;
-}
+
 .navbar .nav-item a {
   color: #9b2721 !important;
 }
@@ -67,6 +71,37 @@ body {
   z-index: 1;
   background-color: rgba(234, 234, 234, 0.9);
 }
+.hero .relasi {
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+.hero .relasi .relasi-list-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  animation: slide1 12s infinite linear 0s;
+}
+.hero .relasi .relasi-list-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  animation: slide2 12s infinite linear 0s;
+}
+@-webkit-keyframes slide1 {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slide2 {
+  to {
+    transform: translateX(0%);
+  }
+}
 .hero .relasi img {
   margin-right: 12px;
   max-height: 50px;
@@ -76,54 +111,61 @@ body {
   z-index: 2;
 }
 .form-template input.cv::after {
-  content: "- CV";
+  content: "CV";
   position: absolute;
-  right: 0;
-  left: 0;
+  right: 10px;
   top: 0;
   bottom: 0;
-  transform: translateX(18px);
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .hero .relasi {
+    width: 90%;
+    margin: 0 0;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------------- */
-.with-bg {
+.info,
+.beasiswa {
   background-image: url("icon/BG\ 1-01.png");
   background-size: cover;
   font-family: "Roboto", sans-serif;
-  padding: 50px 0px;
+  padding: 50px 20px;
 }
-.batch-section {
-  font-family: "Roboto", sans-serif;
-}
-.section1 .col-lg-4 {
+
+.info .info-item {
   background-color: #9f241f;
   color: white;
   text-align: center;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin: 0 18px;
-  width: 220px;
-  height: 200px;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
 }
-
-.section2 img {
+@media (min-width: 768px) {
+  .info .info-item {
+    width: 220px;
+    height: 200px;
+  }
+}
+.batch-section {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+.batch-section .batch-opening img {
   width: 100px;
 }
 
-.section2 .col-12 {
-  display: inline-flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.section2 span {
-  font-size: 20px;
-  font-weight: normal;
+.batch-section .batch-benefit img {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
 }
 
 .section3 h4,
@@ -141,35 +183,15 @@ body {
   width: 25px;
 }
 
-.sect3-content {
-  margin-left: 70px;
-  /* margin-right: -50px; */
+.beasiswa h2 {
+  font-size: 30px;
 }
-
-.sect3-content2 {
-  margin-left: 120px;
-}
-
-.section4 h1 {
-  font-size: 48px;
-}
-
-/* .section4 .img-block {
-  width: 350px;
-} */
-
-@media (max-width: 991.9px) {
-  .section1 .col-lg-4 {
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 16px 12px 0px !important;
-    width: 720px;
-    height: 160px;
-  }
-  .sect3-content {
-    margin-right: 0px;
+@media (min-width: 768px) {
+  .beasiswa h2 {
+    font-size: 48px;
   }
 }
+
 /* --------------------------------------------------------------------------------------------------------- */
 .reason,
 .step {
@@ -180,6 +202,10 @@ body {
   background-color: #f2f2f2;
   overflow: hidden;
 }
+.reason h5 {
+  width: 90%;
+}
+
 .reason img.elemen-kiri,
 .step img.elemen-kiri {
   position: absolute;
@@ -199,8 +225,8 @@ body {
   display: grid;
   column-gap: 20px;
   row-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 10px 80px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 10px;
 }
 .reason .reasons .item-reason {
   text-align: center;
@@ -211,29 +237,65 @@ body {
 .reason .reasons .item-reason img {
   max-height: 80px;
 }
+@media (min-width: 768px) {
+  .reason h5 {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .reason .reasons {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 10px 80px;
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------------------- */
 .target {
-  padding: 100px 0px;
+  padding: 100px 30px;
   font-family: "Roboto", sans-serif;
   background-image: url("icon/BG\ 1-01.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.target .row {
+  flex-direction: column-reverse;
+}
 .target .image-target {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  height: 300px;
 }
 .target .image-target img {
-  max-height: 350px;
+  max-height: 300px;
   position: absolute;
   bottom: 0;
 }
+@media (min-width: 768px) {
+  .target .image-target {
+    height: auto;
+  }
+  .target .row {
+    flex-direction: row;
+  }
+}
 /* ------------------------------------------------------------------------------------------------------------- */
-
+.step {
+  padding: 50px 0px;
+  font-family: "Roboto", sans-serif;
+}
+.step .d-flex img {
+  max-height: 60px;
+}
+.step .d-flex h1 {
+  width: 100%;
+  font-size: 28px;
+}
+.step .d-flex h5 {
+  width: 100%;
+  font-size: 18px;
+}
 .step .image-list {
   position: relative;
   display: flex;
@@ -245,14 +307,341 @@ body {
   position: absolute;
   bottom: 0;
 }
-.step .image-list img.img-hiasan-1 {
-  min-height: 500px;
-  transform: translateX(-40%) translateY(0%);
+.step img.img-people {
+  max-height: 300px;
+  border-radius: 15px;
 }
-.step .image-list img.img-hiasan-2 {
-  min-height: 500px;
-  transform: translateX(40%) translateY(50%);
+
+/* The actual timeline (the vertical ruler) */
+.step {
+  overflow: hidden;
 }
-.step .image-list img.img-people {
-  max-height: 250px;
+.step .timeline {
+  position: relative;
+  margin: 0 auto;
+  height: 550px;
+  overflow-y: hidden;
+  transition: 0.8s;
+}
+.step .timeline .shadow {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 300px;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top, rgba(242, 242, 242, 1), rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0));
+  z-index: 3;
+}
+
+/* The actual timeline (the vertical ruler) */
+.step .timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #ff9f55;
+  top: 20px;
+  /* bottom: 150px; */
+  bottom: 0;
+  left: 4%;
+  margin-left: -6px;
+}
+.step .timeline .button {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+}
+.step .timeline .button button:active {
+  outline: none;
+  box-shadow: none;
+}
+.step .timeline .button button:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* .step .timeline .button button i {
+  transition: 0.5s;
+  position: relative;
+  transform: rotate(180deg);
+} */
+/* Container around content */
+.step .container-section {
+  padding: 0px 40px;
+  position: relative;
+  width: auto;
+}
+
+/* The circles on the timeline */
+.step .container-section::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 1%;
+  background-color: #ff9f55;
+  border: 4px solid #ff9f55;
+  top: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container-section to the right */
+.step .right {
+  left: 0;
+}
+
+/* Fix the circle for container-sections on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 0px 10px;
+  position: relative;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width container-sections */
+  .container-section {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container-section::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+@media (min-width: 768px) {
+  .step .d-flex img {
+    max-height: 120px;
+  }
+  .step .d-flex h1 {
+    width: 75%;
+  }
+  .step .d-flex h5 {
+    width: 80%;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+.testimony {
+  padding: 50px 0px;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  background-image: url("icon/BG\ 1-01.png");
+  background-size: cover;
+}
+.testimony .d-flex img {
+  max-height: 120px;
+}
+.testimony .d-flex h1 {
+  width: 100%;
+  font-size: 44px;
+}
+.testimony .d-flex h5 {
+  width: 100%;
+  font-size: 18px;
+}
+.testimony .slider {
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.testimony .slider .button-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+  z-index: 10;
+}
+
+.testimony .slider .indicator-slider {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  /* width: 50px; */
+  height: auto;
+  z-index: 10;
+  align-items: center;
+}
+.testimony .slider .indicator-slider span {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #9b2721;
+  border: 1px solid #9b2721;
+  cursor: pointer;
+}
+.testimony .slider .indicator-slider span:not(.active) {
+  background-color: white;
+}
+.testimony .slider .content-slider {
+  /* position: relative; */
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  transform: translateX(260px);
+  /* justify-content: center; */
+  align-items: center;
+}
+.testimony .slider .content-slider .card-slider {
+  min-width: 558px;
+  max-width: 558px;
+  background-color: white;
+  height: 290px;
+  padding: 50px;
+  text-align: center;
+  border-radius: 25px;
+  margin-right: 100px;
+  box-shadow: 2px 5px 20px 3px rgba(138, 138, 138, 0.4);
+}
+.testimony .slider .content-slider .card-slider p {
+  font-size: 15px;
+}
+.testimony .slider .content-slider .card-slider .image {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background-color: #9f241f;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.testimony .slider .content-slider .card-slider .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+.faq {
+  padding: 50px 0px;
+}
+.faq .title {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.faq .title img {
+  max-height: 120px;
+}
+.faq h1 {
+  color: #9f241f;
+}
+
+.accordion-item {
+  margin: 24px 0 24px 0;
+  border-radius: 20px !important;
+  border: 1px solid rgb(41, 41, 41) !important;
+}
+
+.accordion-header {
+  margin-bottom: -1px;
+  padding-left: 50px;
+  /* border-bottom: 1px solid rgb(43, 43, 43) !important; */
+  border-radius: 20px;
+}
+
+.accordion-collapse {
+  padding: 0 50px 0 50px;
+}
+
+.accordion-button {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: transparent;
+  color: #343434;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #343434;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.map {
+  margin-bottom: -8px;
+  overflow: hidden;
+}
+
+.faq,
+footer {
+  background-color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+}
+
+.img-logo-footer {
+  width: 200px;
+}
+
+.footer-line {
+  border-top: 3px solid orange;
+  width: 120px;
+  margin-bottom: 24px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.icon-social {
+  width: 25px;
+}
+
+.footer-right p {
+  display: inline-block;
+  text-indent: -1.8em;
+  margin-left: 1.8em;
+}
+
+.footer-right img {
+  width: 20px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #343434;
 }

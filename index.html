@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
+    <!-- Link Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>HashMicro Academy</title>
@@ -24,25 +27,26 @@
         <a class="navbar-brand" href="#">
           <img src="img/HM Academy_Putih-01.png" alt="HashMicro Academy" />
         </a>
+        <a class="nav-link btn btn-light rounded-3 fw-bold px-2 py-1 text-maroon ms-auto me-3 d-lg-none" href="#">Daftar Sekarang</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item social me-5">
-              <a class="nav-link m-0 p-0" aria-current="page" href="#">
-                <img src="icon/mail_section 1-01.png" alt="email" />
+        <div class="collapse navbar-collapse justify-content-end ps-4 ps-lg-0" id="navbarNav">
+          <ul class="navbar-nav align-items-lg-center align-items-start">
+            <li class="nav-item social">
+              <a class="nav-link m-0 me-5 p-0 d-flex align-items-center mt-3 mt-lg-0" aria-current="page" href="#">
+                <img src="icon/Mail_Section 1-01.svg" alt="email" class="me-2" />
                 <span class="text-light">hello@hashmicro.com</span>
               </a>
-              <a class="nav-link m-0 p-0" aria-current="page" href="#">
-                <img src="icon/Insta_section 1-01.png" alt="instagram" />
+              <a class="nav-link m-0 me-5 p-0 d-flex align-items-center mt-3 mt-lg-0" aria-current="page" href="#">
+                <img src="icon/Insta_section 1-01.svg" alt="instagram" class="me-2" />
                 <span class="text-light">@hashMicro.academy</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-light rounded-3 fw-bold me-5 px-3 py-1" href="#">FAQ</a>
+            <li class="nav-item mt-3 mt-lg-0">
+              <a class="nav-link btn btn-light rounded-3 fw-bold me-5 px-3 py-1 mb-4 mb-lg-0" href="#">FAQ</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-lg-inline-flex">
               <a class="nav-link btn btn-light rounded-3 fw-bold px-3 py-1" href="#">Daftar Sekarang</a>
             </li>
           </ul>
@@ -55,28 +59,43 @@
     <section class="hero">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-7">
-            <h1 class="fw-bold">Beasiswa Pelatihan</h1>
-            <h1 class="text-maroon fw-bold">HIT Bootcamp</h1>
-            <p class="w-75">Pelatihan programming intensif gratis untuk semua orang, baik dengan latar belakang IT dan non-IT. Dapatkan beasiswa 100% dan kesempatan langsung bekerja di HashMicro!</p>
-            <p class="fw-bold">Bekerja sama dengan:</p>
-            <div class="d-flex relasi">
-              <img src="img/Logo Kerja Sama HM Academy/Logo Kalbis_section 1-01.png" alt="Kalbis Institute" />
-              <img src="img/Logo Kerja Sama HM Academy/Logo Binus_section1-01.png" alt="Binus University" />
-              <img src="img/Logo Kerja Sama HM Academy/Logo Pradita_section 1.png" alt="Pradita University" />
-              <img src="img/Logo Kerja Sama HM Academy/Logo UBM_section 1-01.png" alt="Universitas Bunda Mulia" />
-              <img src="img/Logo Kerja Sama HM Academy/Logo ITK_section 1-01.png" alt="Instittu Teknologi Kalimantan" />
-              <img src="img/Logo Kerja Sama HM Academy/Logo Unpad_section 1-01.png" alt="Universitas Padjajaran" />
+          <div class="col-md-7 p-3 p-md-1">
+            <h1 class="fw-bold text-center text-md-start">Beasiswa Pelatihan</h1>
+            <h1 class="text-maroon fw-bold text-center text-md-start">HIT Bootcamp</h1>
+            <p class="w-75 text-center text-md-start mx-auto mx-md-0">
+              Pelatihan programming intensif gratis untuk semua orang, baik dengan latar belakang IT dan non-IT. Dapatkan beasiswa 100% dan kesempatan langsung bekerja di HashMicro!
+            </p>
+            <p class="fw-bold text-center text-md-start">Bekerja sama dengan:</p>
+            <div class="relasi">
+              <div class="relasi-list-one d-flex">
+                <img src="img/Logo Kerja Sama HM Academy/Logo Kalbis_section 1-01.png" alt="Kalbis Institute" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Binus_section1-01.png" alt="Binus University" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Pradita_section 1.png" alt="Pradita University" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo UBM_section 1-01.png" alt="Universitas Bunda Mulia" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo ITK_section 1-01.png" alt="Instittu Teknologi Kalimantan" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Unpad_section 1-01.png" alt="Universitas Padjajaran" />
+              </div>
+              <div class="relasi-list-two d-flex">
+                <img src="img/Logo Kerja Sama HM Academy/Logo Kalbis_section 1-01.png" alt="Kalbis Institute" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Binus_section1-01.png" alt="Binus University" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Pradita_section 1.png" alt="Pradita University" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo UBM_section 1-01.png" alt="Universitas Bunda Mulia" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo ITK_section 1-01.png" alt="Instittu Teknologi Kalimantan" />
+                <img src="img/Logo Kerja Sama HM Academy/Logo Unpad_section 1-01.png" alt="Universitas Padjajaran" />
+              </div>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 mt-5 mt-md-1">
             <div class="form-template">
-              <h1 class="fw-bold mb-3">Daftarkan Dirimu Sekarang</h1>
+              <h1 class="fw-bold mb-3 text-center text-md-start">
+                Daftarkan Dirimu <br />
+                Sekarang
+              </h1>
               <div class="row my-4">
                 <div class="col-md">
                   <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" />
                 </div>
-                <div class="col-md">
+                <div class="col-md mt-4 mt-md-0">
                   <input type="text" name="jeniskelamin" id="jeniskelamin" class="form-control" placeholder="Jenis Kelamin" />
                 </div>
               </div>
@@ -84,14 +103,14 @@
                 <div class="col-md">
                   <input type="number" name="notelp" id="notelp" class="form-control" placeholder="Nomor Telepon" />
                 </div>
-                <div class="col-md">
+                <div class="col-md mt-4 mt-md-0">
                   <input type="date" name="tanggallahir" id="tanggallahir" class="form-control" placeholder="Tanggal Lahir" />
                 </div>
               </div>
               <input type="email" name="email" id="email" class="form-control my-4" placeholder="Email" />
               <input type="file" name="cv" id="cv" class="form-control my-4 cv position-relative" placeholder="CV" />
               <div class="text-end">
-                <button class="btn btn-maroon px-3 rounded-3">Submit</button>
+                <button class="btn btn-maroon px-4 rounded-3 rounded-3">Submit</button>
               </div>
             </div>
           </div>
@@ -101,63 +120,82 @@
     <!-- END SECTION HERO -->
 
     <!-- SECTION 2-->
-    <section class="with-bg">
+    <section class="info">
       <div class="container">
-        <div class="row section1 justify-content-center">
-          <div class="col-lg-4 col-md-12 pt-3">
+        <div class="row justify-content-between">
+          <div class="col-md-4 pt-3 info-item">
             <h2>Gaji<br />8-15 Juta++</h2>
             <p>Gaji programmer lulusan HIT Bootcamp dimulai dari delapan juta</p>
           </div>
-          <div class="col-lg-4 col-md-12 pt-2">
+          <div class="col-md-4 pt-2 info-item">
             <h2>1000+<br />Pendaftar</h2>
             <p>Ribuan orang telah mendaftar untuk bisa mempelajari seluk - beluk IT di HashMicro</p>
           </div>
-          <div class="col-lg-4 col-md-12 pt-3">
+          <div class="col-md-4 pt-3 info-item">
             <h2>100%<br />Beasiswa</h2>
             <p>Tersedia program beasiswa 100% untuk peserta terpilih tanpa batasan penerima</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="py-4 batch-section">
+
+    <section class="batch-section py-4">
       <div class="container">
-        <div class="row section2">
-          <div class="col-12">
-            <img src="icon/Bola kubus 1-01.png" alt="" />
-            <h2>Now Opening: Batch III<br /><span>Offline Learning</span></h2>
-            <img src="icon/Bola kubus 2-01.png" alt="" />
+        <div class="row batch-opening">
+          <div class="col-12 d-inline-flex align-items-center justify-content-center text-center">
+            <img src="icon/bola kubus 1-01.svg" alt="" />
+            <h2 class="fw-bold">Now Opening: Batch III<br /><span>Offline Learning</span></h2>
+            <img src="icon/bola kubus 2-01.svg" alt="" />
           </div>
         </div>
-        <div class="row section3 mt-4">
-          <div class="col-1"></div>
-          <div class="col-5">
-            <h4 class="mb-4 fw-bold">Fullstack Developer</h4>
-            <div class="sect3-content">
-              <p><img class="icon" src="icon/Jam_section 3-01.png" alt="" /> &ensp;Durasi belajar selama <span class="fw-bold">dua bulan</span></p>
-              <p><img class="icon" src="icon/Pin_section 3-01.png" alt="" /> &ensp;Pembelajaran offline di <span class="fw-bold">Yogyakarta (kandidat terbatas)</span></p>
-              <p><img class="icon" src="icon/Kalender_section 3-01.png" alt="" /> &ensp;Full-day learning <span class="fw-bold">Senin - Jumat | 08.00 - 17.00</span> <br />Belajar mulai <span class="fw-bold">9 Mei 2022</span></p>
+        <div class="row batch-benefit mt-4">
+          <div class="col-1 d-none d-lg-block"></div>
+          <div class="col-lg-5 col-md ps-5">
+            <h4 class="mb-4 fw-bold text-center text-md-start">Fullstack Developer</h4>
+            <div class="benefit-content">
+              <div class="d-flex">
+                <img class="icon" src="icon/Jam_section 3-01.svg" alt="" />
+                <p>Durasi belajar selama <span class="fw-bold">dua bulan</span></p>
+              </div>
+              <div class="d-flex">
+                <img class="icon" src="icon/Pin_section 3.svg" alt="" />
+                <p>Pembelajaran offline di <span class="fw-bold">Yogyakarta (kandidat terbatas)</span></p>
+              </div>
+              <div class="d-flex">
+                <img class="icon" src="icon/Kalender-01.svg" alt="" />
+                <p>Full-day learning <span class="fw-bold">Senin - Jumat | 08.00 - 17.00</span> <br />Belajar mulai <span class="fw-bold">9 Mei 2022</span></p>
+              </div>
             </div>
           </div>
-          <div class="col-5">
-            <h4 class="mb-4 fw-bold">Biaya Program & Beasiswa</h4>
-            <div class="sect3-content2">
-              <p><img class="icon" src="icon/Free_section 3-01.png" alt="" /> &ensp;<span class="fw-bold">Gratis</span> biaya pendaftaran</p>
-              <p><img class="icon" src="icon/Uang_section 3-01.png" alt="" /> &ensp;Biaya program <span class="fw-bold">Rp8.000.000,-</span></p>
-              <p><img class="icon" src="icon/Cashback_section 3-01.png" alt="" /> &ensp;<span class="fw-bold">Tersedia Cashback 30%</span></p>
+          <div class="col-lg-5 col-md ps-5 mt-4 mt-md-0">
+            <h4 class="mb-4 fw-bold text-center text-md-start">Biaya Program & Beasiswa</h4>
+            <div class="benefit-content2">
+              <div class="d-flex">
+                <img class="icon" src="icon/Free_section 3-01.svg" alt="" />
+                <p><span class="fw-bold">Gratis</span> biaya pendaftaran</p>
+              </div>
+              <div class="d-flex">
+                <img class="icon" src="icon/Uang_section 3-01.svg" alt="" />
+                <p>Biaya program <span class="fw-bold">Rp8.000.000,-</span></p>
+              </div>
+              <div class="d-flex">
+                <img class="icon" src="icon/Cashback_section 3-01.svg" alt="" />
+                <p><span class="fw-bold">Tersedia Cashback 30%</span></p>
+              </div>
             </div>
           </div>
-          <div class="col-1"></div>
+          <div class="col-1 d-none d-lg-block"></div>
         </div>
       </div>
     </section>
-    <section class="with-bg">
+    <section class="beasiswa">
       <div class="container">
         <div class="row section4">
-          <div class="col-6 text-center">
-            <img class="img-fluid img-block" src="icon/BG Foto-01.png" alt="" style="max-height: 350px" />
+          <div class="col-md-6 text-center">
+            <img class="img-fluid img-block" src="icon/BG Foto-01.png" alt="" style="max-height: 200px" />
           </div>
-          <div class="col-6 my-auto">
-            <h1 class="mb-4">Dapatkan Beasiswa Fully-funded</h1>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <h2 class="mb-4">Dapatkan Beasiswa Fully-funded</h2>
             <p>
               Beasiswa HIT Bootcamp adalah tunjangan di mana kamu bisa mengikuti program ini secara gratis. Program beasiswa ini diberikan kepada peserta yang berhasil melalui pre-test dengan nilai yang memuaskan, tanpa batasan penerima.
             </p>
@@ -175,36 +213,36 @@
       <div class="container">
         <div class="text-center mb-3">
           <h1 class="fw-bold">Kenapa HIT Bootcamp Berbeda?</h1>
-          <h5 class="fw-bold w-50 mx-auto">Bersama HashMicro Academy, kamu akan mendapatkan pelatihan langsung dari pengajar IT profesional.</h5>
+          <h5 class="fw-bold mx-auto">Bersama HashMicro Academy, kamu akan mendapatkan pelatihan langsung dari pengajar IT profesional.</h5>
         </div>
         <div class="reasons">
           <div class="item-reason">
-            <img src="icon/Graduation hat_section 5-01.png" alt="Beasiswa" />
+            <img src="icon/Graduation hat_section 5-01.svg" alt="Beasiswa" />
             <p class="text-maroon fs-4 fw-bold">Beasiswa</p>
             <span>HashMicro memberikan kesempatan beasiswa tanpa batasan penerima. Beasiswa akan diberikan kepada peserta dengan hasil pre-test yang baik. </span>
           </div>
           <div class="item-reason">
-            <img src="icon/Tas_section 5-01.png" alt="Kerja" />
+            <img src="icon/Suitcase_section 5-01.svg" alt="Kerja" />
             <p class="text-maroon fs-4 fw-bold">Langsung Kerja</p>
             <span>Bukan melalui penyaluran kerja, kamu sudah pasti akan diterima sebagai karyawan fulltime di HashMicro jika lulus dengan nilai yang memuaskan. </span>
           </div>
           <div class="item-reason">
-            <img src="icon/Person 1_section 5-01.png" alt="Mentor Berpengalaman" />
+            <img src="icon/Person 1_section 5-01.svg" alt="Mentor Berpengalaman" />
             <p class="text-maroon fs-4 fw-bold">Mentor Professional</p>
             <span>HashMicro telah mencetak developer berkualitas dengan bimbingan mentor dengan pengalaman selama 15+ lebih. </span>
           </div>
           <div class="item-reason">
-            <img src="icon/Person 2_section 5-01.png" alt="Terbuka " />
+            <img src="icon/Person 2_section 5-01.svg" alt="Terbuka " />
             <p class="text-maroon fs-4 fw-bold">Terbuka Untuk Semua Orang</p>
             <span>Program ini dirancang untuk semua orang, baik fresh graduate dengan latar pendidikan IT maupun non IT dengan pendidikan minimal terakhir D3.</span>
           </div>
           <div class="item-reason">
-            <img src="icon/Piagam_section 5-01.png" alt="Kurikulum" />
+            <img src="icon/Piagam_section 5-01.svg" alt="Kurikulum" />
             <p class="text-maroon fs-4 fw-bold">Kurikulum Standar Industri Global</p>
             <span>Kurikulum dikembangkan berdasarkan kebutuhan IT industri dan dirancang langsung oleh tim R&D HashMicro.</span>
           </div>
           <div class="item-reason">
-            <img src="icon/sertifikat_section 5-01.png" alt="Sertifikat" />
+            <img src="icon/Sertifikat_section 5-01.svg" alt="Sertifikat" />
             <p class="text-maroon fs-4 fw-bold">Sertifikat</p>
             <span>Program bootcamp ini juga meliputi latihan yang berbasis proyek, sehingga sertifikat yang didapat dapat dijadikan portfolio.</span>
           </div>
@@ -217,7 +255,7 @@
     <section class="target">
       <div class="container">
         <div class="row">
-          <div class="col-md">
+          <div class="col-md mt-4 mt-md-0">
             <h1 class="mb-4">Untuk Siapa Program Ini Dirancang?</h1>
             <h5 class="text-maroon fw-bold">Fresh Graduate</h5>
             <p>
@@ -240,30 +278,336 @@
     <!-- END SECTION TARGET -->
 
     <section class="step">
-      <img src="icon/Bola kubus 1-01.png" alt="" class="elemen-kiri" />
-      <img src="icon/Bola kubus 3-01.png" alt="" class="elemen-kanan" />
       <div class="container">
-        <div class="text-center mb-3">
-          <h1 class="fw-bold w-75 mx-auto">Langkah Mengikuti Program Beasiswa Hashmicro IT Bootcamp</h1>
-          <h5 class="fw-bold w-50 mx-auto">Berikut proses yang akan kamu lalui ketika mengikuti HashMicro IT Bootcamp</h5>
+        <div class="d-flex justify-content-between align-items-center">
+          <img src="icon/bola kubus 1-01.svg" alt="" />
+          <div class="text-center mb-3">
+            <h1 class="fw-bold mx-auto">Langkah Mengikuti Program Beasiswa Hashmicro IT Bootcamp</h1>
+            <h5 class="fw-bold mx-auto">Berikut proses yang akan kamu lalui ketika mengikuti HashMicro IT Bootcamp</h5>
+          </div>
+          <img src="icon/bola kubus 3-01.svg" alt="" />
         </div>
-        <div class="row">
+        <div class="row mt-4">
           <div class="col-md">
-            <div class="image-list">
-              <img src="icon/Background Section Langkah-langkah-01.png" alt="" class="img-hiasan-1" />
-              <img src="icon/Background Section Langkah-langkah 2-01.png" alt="" class="img-hiasan-2" />
-              <img src="img/bg-hero.webp" alt="" class="img-people" />
+            <img src="img/bg-hero.webp" alt="" class="img-people img-fluid" />
+          </div>
+          <div class="col-md mt-4 mt-md-0">
+            <div class="timeline">
+              <div class="shadow"></div>
+              <div class="line-vertical"></div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Pastikan Kamu Memenuhi Kualifikasi</h4>
+                  <p>Program ini ditujukan untuk calon peserta yang memiliki ketertarikan di bidang IT dengan latar belakang pendidikan minimal D3.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Isi Formulir</h4>
+                  <p>Daftarkan dirimu dengan mengisi form yang ada di laman ini.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Mengerjakan Tes Basic Programming</h4>
+                  <p>Semua pendaftar akan dikirimi tes pengetahuan dasar programming dan akan diseleksi berdasarkan hasil tes.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Materi Pengenalan & Pre-test</h4>
+                  <p>Peserta terpilih akan memulai pembelajaran dasar programming dan akan diberikan pre-test.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Pemberian Beasiswa</h4>
+                  <p>Seluruh peserta yang memenuhi nilai batas pre-test akan diberikan beasiswa 100% dan dapat menjalani program bootcamp ini secara gratis.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Penandatangan Kontrak</h4>
+                  <p>Penerima beasiswa akan menandatangani kontrak yang menyatakan kesediaannya bekerja di HashMicro selama dua tahun setelah program bootcamp berakhir.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Mengikuti Kegiatan Pembelajaran</h4>
+                  <p>Seluruh peserta akan mengikuti program bootcamp dan mengasah hardskill serta softskill 8 jam per hari selama 12 minggu secara onsite.</p>
+                </div>
+              </div>
+              <div class="container-section right">
+                <div class="content">
+                  <h4 class="text-maroon fw-bold">Graduated dan kontrak kerja</h4>
+                  <p>Setelah program bootcamp berakhir, seluruh peserta akan mendapatkan sertifikat dan seluruh peserta akan mengikuti serangkaian tes sebelum penandatanganan contract sebagai karyawan full-time di HashMicro.</p>
+                </div>
+              </div>
+              <div class="button">
+                <button class="btn mx-auto" id="selengkapnya">
+                  <span> Selengkapnya</span> <br />
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="col-md"></div>
         </div>
       </div>
     </section>
+
+    <section class="testimony">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="icon/bola kubus 1-01.svg" alt="" />
+          <div class="text-center mb-3 mx-4">
+            <h1 class="fw-bold mx-auto text-maroon">Apa Kata Mereka</h1>
+          </div>
+          <img src="icon/bola kubus 3-01.svg" alt="" />
+        </div>
+        <div class="slider">
+          <div class="button-slider">
+            <button class="btn fs-2 fw-bold"><i class="bi bi-chevron-left"></i></button>
+            <button class="btn fs-2 fw-bold"><i class="bi bi-chevron-right"></i></button>
+          </div>
+          <div class="indicator-slider">
+            <span></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="content-slider">
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Bintang Edma</h4>
+              </div>
+              <p class="mt-4">Seru rasanya bisa training di HashMicro IT Bootcamp, Saya mendapat banyak pengalaman belajar programming dan saya juga bangga bisa diajarkan langsung dengan mentor-mentor yang hebat di bidang programming</p>
+            </div>
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Titus</h4>
+              </div>
+              <p class="mt-4">
+                Saya sangat senang diberi kesempatan untuk mengikuti HashMicro IT bootcamp. Karenanya saya bisa terus mengembangkan keterampilan saya dalam bidang programming. Kehadiran mentor yang selalu membimbing saya untuk memahami hal
+                apa saja di bidang developer dan programming.
+              </p>
+            </div>
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Salsabila Adnan</h4>
+              </div>
+              <p class="mt-4">
+                Tentunya sangat berkesan dan suatu kebanggaan juga diberi kesempatan untuk belajar dan menimba ilmu programming di HashMicro, mentor juga teman-teman sangat baik dan ramah membuat training ini terasa menjadi ringan.
+              </p>
+            </div>
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Nathania Michelle</h4>
+              </div>
+              <p class="mt-4">
+                Belajar programming di IT Bootcamp seru, mentornya sangat mendetail dan kalau ada error atau masalah bisa langsung bertanya jadi tidak bingung. Dan saya senang bisa belajar dan berkembang bersama teman-teman saya.
+              </p>
+            </div>
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Kholiz</h4>
+              </div>
+              <p class="mt-4">
+                Saya sangat excited mengikuti IT bootcamp di Hashmicro. Banyak ilmu dan pengalaman yang saya dapatkan. Selain itu, saya mendapat banyak teman dan mengenal para mentor yang menyambut saya dengan hangat kekeluargaan,
+                pengalaman yang sangat berharga.
+              </p>
+            </div>
+            <div class="card-slider">
+              <div class="d-flex justify-content-center align-items-center mx-auto">
+                <div class="image">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="text-maroon p-0 m-0 fs-5 fw-bold">Arga Dwi Ardinata</h4>
+              </div>
+              <p class="mt-4">Ikut Training di Hashmicro sangat menyenangkan karena mendapatkan ilmu baru yaitu tentang membangun sistem ERP yang mana hal tersebut tidak diajarkan di kampus saya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq pb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 title">
+            <img src="icon/Bola kubus 4-01.svg" alt="" />
+            <h1 class="mx-4 fw-bold">FAQ</h1>
+            <img src="icon/bola kubus 2-01.svg" alt="" />
+          </div>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Apakah saya harus punya latar belakang di bidang IT?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Tidak, kami akan memberikan pelatihan untuk semua peserta apapun itu latar belakang pendidikannya.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Apa spesifikasi minimum laptop yang wajib saya miliki?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Kamu diwajibkan memiliki laptop dengan kapasitas RAM minimal 8GB dan kapasitas hardisk yang mencukupi.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Jika saya masih berkuliah apakah saya bisa mengikuti program ini?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Program bootcamp ini merupakan pelatihan intensif selama 12 minggu dan akan langsung bekerja di HashMicro sehingga mahasiswa tidak dianjurkan untuk mengikuti program ini.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                Berapa lama program bootcamp ini berlangsung?
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Program bootcamp ini akan berlangsung selama 8 minggu dimulai dari Juni hingga Agustus 2022 secara onsite di Yogyakarta.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                Apakah ada kriteria tertentu untuk dapat bergabung dengan HashMicro setelah lulus?
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Untuk dapat diterima sebagai karyawan fulltime di HashMicro, kamu harus melewati tahap seleksi, training dan lulus dengan hasil yang memuaskan.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                Apakah saya wajib bergabung dengan HashMicro setelah program bootcamp selesai?
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Ya. Bergabung bersama HashMicro adalah bagian dari komitmenmu ketika mengikuti program bootcamp ini.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                Bagaimana metode pembelajaran HashMicro IT Bootcamp?
+              </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Sebelum memulai pembelajaran, kamu akan diberikan pre-test dan akan menentukan apakah kamu akan mengikuti kelas advanced atau basic dengan 70% praktek dan 30% teori.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.673507216889!2d106.7897935!3d-6.1751321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95bb3873211c7f14!2sHashMicro%20%7C%20Solusi%20Software%20Sistem%20ERP%20Indonesia!5e0!3m2!1sen!2sid!4v1649231626996!5m2!1sen!2sid"
+        width="100%"
+        height="450"
+        style="border: none"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <footer class="pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <img class="img-fluid img-logo-footer" src="img/Logo HashMicro-01.png" alt="" />
+            <p>Penyedia solusi ERP dengan rangkaian software terlengkap untuk berbagai jenis industri yang dapat disesuaikan dengan kebutuhan setiap bisnis.</p>
+            <img class="img-fluid img-logo-footer" src="img/HM Academy_Warna-01.png" alt="" />
+            <p class="mb-4">HashMicro Academy merupakan subsidiary company dari HashMicro yang memiliki visi untuk menjadi wadah bagi mahasiswa serta masyarakat umum dalam mengembangkan soft skill dan hard skill di bidang teknologi.</p>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3>Tentang Kami</h3>
+            <div class="footer-line"></div>
+            <p>Perusahaan</p>
+            <p>Karir</p>
+            <p>Blog</p>
+            <p>Produk Kami</p>
+            <h3 class="mt-4">Sosial Media</h3>
+            <div class="footer-line"></div>
+            <div class="mb-4">
+              <img class="img-fluid icon-social" src="icon/Facebook_footer-01.svg" alt="" />
+              <img class="img-fluid icon-social" src="icon/Insta_footer-01.svg" alt="" />
+              <img class="img-fluid icon-social" src="icon/twitter_footer-01.svg" alt="" />
+              <img class="img-fluid icon-social" src="icon/linkedin_footer-01.svg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3>Hubungi Kami</h3>
+            <div class="footer-line"></div>
+            <div class="footer-right">
+              <p>
+                <img src="icon/pin_footer-01.svg" alt="" />
+                Neo Soho Podomoro City Unit 37.09-37.10, Jalan Letjen S. Parman Kav. 28, RT.3/RW.5, Tanjung Duren Selatan, Grogol Petamburan Kota Jakarta Barat, DKI Jakarta 11470
+              </p>
+            </div>
+            <div class="footer-right">
+              <p>
+                <img src="icon/pin_footer-01.svg" alt="" />
+                Spazio Tower, Unit 8-11, Jl. l. Mayjen Yono Suwoyo, Pradahkalikendal, Kec. Dukuhpakis, Kota Surabaya, Jawa Timur 60225
+              </p>
+            </div>
+            <div class="footer-right">
+              <p>
+                <img src="icon/pin_footer-01.svg" alt="" />
+                The Octagon #06-2A, 105 Cecil Street, Singapore 069534
+              </p>
+            </div>
+            <div class="footer-right">
+              <p><img src="icon/Telp_footer-01.svg" alt="" /><a href=""> +62 878-8800-0015</a></p>
+            </div>
+            <div class="footer-right">
+              <p><img src="icon/Whatsapp_footer-01.svg" alt="" /><a href=""> +62 878-8800-0015</a></p>
+            </div>
+            <div class="footer-right">
+              <p><img src="icon/Mail_footer-01.svg" alt="" /><a href=""> hello@hashmicro.com</a></p>
+            </div>
+            <div class="footer-right mb-4">
+              <p><img src="icon/Mail_footer-01.svg" alt="" /><a href=""> partnership@hashmicro.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="main.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
