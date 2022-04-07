@@ -137,11 +137,13 @@ body {
 
 .info .info-item {
   background-color: #9f241f;
+  display: flex;
+  flex-direction: column;
   color: white;
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 24px;
   column-gap: 10px;
   row-gap: 10px;
   width: 100%;
@@ -150,8 +152,14 @@ body {
 }
 @media (min-width: 768px) {
   .info .info-item {
-    width: 220px;
+    width: 230px;
     height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .info .info-item {
+    width: 300px;
+    height: 250px;
   }
 }
 .batch-section {
