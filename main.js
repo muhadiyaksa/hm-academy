@@ -1,23 +1,62 @@
 const btnSelengkapnya = document.getElementById("selengkapnya");
+const sectionStep = document.querySelector(".step ");
 const sectionTimeline = document.querySelector(".step .timeline");
-const timelineShadow = document.querySelector(".step .timeline .shadow");
-const timelineLine = document.querySelector(".step .timeline .line-vertical");
+const timelineShadow = document.querySelector(".step .accordion .shadow");
 
 btnSelengkapnya.addEventListener("click", function () {
   btnSelengkapnya.classList.toggle("show");
   if (btnSelengkapnya.classList.contains("show")) {
-    sectionTimeline.style.height = "980px";
-    sectionTimeline.style.overflowY = "visible";
-    timelineShadow.style.display = "none";
-    btnSelengkapnya.querySelector("span").innerHTML = "Lebih Sedikit";
-    btnSelengkapnya.querySelector("i").style.display = "none";
-    // timelineLine.style.bottom = "200px";
+    setTimeout(() => {
+      timelineShadow.style.display = "none";
+    }, 200);
+    btnSelengkapnya.innerHTML = "Lebih Sedikit";
   } else {
-    sectionTimeline.style.height = "550px";
-    sectionTimeline.style.overflowY = "hidden";
     timelineShadow.style.display = "block";
-    btnSelengkapnya.querySelector("span").innerHTML = "Selengkapnya";
-    btnSelengkapnya.querySelector("i").style.display = "block";
-    // timelineLine.style.bottom = "0";
+    btnSelengkapnya.innerHTML = "Selengkapnya";
   }
 });
+
+const buttonLeft = document.querySelector(".testimony button.left");
+const buttonRight = document.querySelector(".testimony button.right");
+const contentCard = document.querySelector(".testimony .content-slider");
+const contentCardAll = document.querySelectorAll(".testimony .content-slider .card-slider");
+const indicatorAll = document.querySelectorAll(".testimony .indicator-slider span");
+let width = contentCard.querySelector(".card-slider.center").offsetWidth;
+
+let i = 0;
+buttonRight.addEventListener("click", function () {
+  if (i + width >= width * 6) {
+    i = 0;
+  } else {
+    i = i + width + 100;
+  }
+  let nilai = i / (width + 100);
+  indicatorActive(nilai);
+  contentCard.style.transform = `translateX(-${i}px)`;
+});
+buttonLeft.addEventListener("click", function () {
+  if (i === 0) {
+    i = (width + 100) * 5;
+  } else {
+    i = i - (width + 100);
+  }
+  let nilai = i / (width + 100);
+  indicatorActive(nilai);
+  contentCard.style.transform = `translateX(-${i}px)`;
+});
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("indicator-span")) {
+    let nilai = e.target.getAttribute("indeks");
+    i = +nilai * (width + 100);
+    indicatorActive(+nilai);
+    contentCard.style.transform = `translateX(-${i}px)`;
+  }
+});
+
+function indicatorActive(params) {
+  indicatorAll.forEach((el) => {
+    el.classList.remove("active");
+  });
+
+  indicatorAll[params].classList.add("active");
+}
