@@ -93,32 +93,29 @@
               </div>
             </div>
           </div>
-          <div class="col-md-5 mt-5 mt-md-1">
-            <div class="form-template">
-              <h1 class="fw-bold mb-3 text-center text-md-start">
-                Daftarkan Dirimu <br />
-                Sekarang
-              </h1>
-              <div class="row my-4">
-                <div class="col-md">
-                  <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" />
-                </div>
-                <div class="col-md mt-4 mt-md-0">
-                  <input type="text" name="jeniskelamin" id="jeniskelamin" class="form-control" placeholder="Jenis Kelamin" />
-                </div>
+          <div class="col-md-5 mt-5 mt-md-1 countdown">
+            <h5 class="text-lg-end text-center fs-4 text-maroon">Pendaftar Akan Ditutup Pada:</h5>
+            <div class="d-flex fs-1 justify-content-lg-end justify-content-center">
+              <div class="count days me-4">
+                <span id="day-one">0</span>
+                <span id="day-two">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Days</p>
               </div>
-              <div class="row my-4">
-                <div class="col-md">
-                  <input type="number" name="notelp" id="notelp" class="form-control" placeholder="Nomor Telepon" />
-                </div>
-                <div class="col-md mt-4 mt-md-0">
-                  <input type="date" name="tanggallahir" id="tanggallahir" class="form-control" placeholder="Tanggal Lahir" />
-                </div>
+              <div class="count hours me-4">
+                <span id="hour-one">0</span>
+                <span id="hour-two">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Hours</p>
               </div>
-              <input type="email" name="email" id="email" class="form-control my-4" placeholder="Email" />
-              <input type="file" name="cv" id="cv" class="form-control my-4 cv position-relative" placeholder="CV" />
-              <div class="text-end">
-                <button class="btn btn-maroon px-4 rounded-3 rounded-3">Submit</button>
+              <div class="count minute">
+                <span id="minute-one">0</span>
+                <span id="minute-two">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Minute</p>
               </div>
             </div>
           </div>
@@ -604,6 +601,48 @@
         </div>
       </div>
     </section>
+
+    <section class="waktu">
+      <div class="container">
+        <div class="row judul">
+          <div class="col-md-6">
+            <h1 class="fw-bold text-center text-lg-start">Mulai Karirmu Sebagai Developer Professional</h1>
+            <h5 class="text-light text-center text-lg-start">Dapatkan pembelajaran intensif dengan bimbingan mentor terbaik di HIT Bootcamp!</h5>
+            <h5 class="text-lg-start text-center mt-3 text-light">Pendaftar Akan Ditutup Pada:</h5>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-5 mt-5 mt-md-1 countdown">
+            <div class="d-flex fs-1 justify-content-lg-start justify-content-center">
+              <div class="count days me-4">
+                <span id="day-one-waktu">0</span>
+                <span id="day-two-waktu">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Days</p>
+              </div>
+              <div class="count hours me-4">
+                <span id="hour-one-waktu">0</span>
+                <span id="hour-two-waktu">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Hours</p>
+              </div>
+              <div class="count minute">
+                <span id="minute-one-waktu">0</span>
+                <span id="minute-two-waktu">0</span>
+                <div class="right"></div>
+                <div class="left"></div>
+                <p>Minute</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-maroon mt-5">Daftar Sekarang</button>
+      </div>
+    </section>
+
     <section class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.673507216889!2d106.7897935!3d-6.1751321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95bb3873211c7f14!2sHashMicro%20%7C%20Solusi%20Software%20Sistem%20ERP%20Indonesia!5e0!3m2!1sen!2sid!4v1649231626996!5m2!1sen!2sid"
@@ -621,11 +660,11 @@
           <div class="col-md-12 col-lg-4">
             <div class="row">
               <div class="col-md-6 col-lg-12">
-                <img class="img-fluid img-logo-footer" src="img/Logo HashMicro-01.png" alt="" />
+                <img class="img-fluid img-logo-footer" src="img/Logo Hashmicro.svg" alt="" />
                 <p>Penyedia solusi ERP dengan rangkaian software terlengkap untuk berbagai jenis industri yang dapat disesuaikan dengan kebutuhan setiap bisnis.</p>
               </div>
               <div class="col-md-6 col-lg-12">
-                <img class="img-fluid img-logo-footer" src="img/HM Academy_Warna-01.png" alt="" />
+                <img class="img-fluid img-logo-footer" src="img/Logo HM Academy.svg" alt="" />
                 <p>HashMicro Academy merupakan subsidiary company dari HashMicro yang memiliki visi untuk menjadi wadah bagi mahasiswa serta masyarakat umum dalam mengembangkan soft skill dan hard skill di bidang teknologi.</p>
               </div>
             </div>
@@ -701,3 +740,31 @@
     -->
   </body>
 </html>
+
+<!-- <div class="form-template">
+  <h1 class="fw-bold mb-3 text-center text-md-start">
+    Daftarkan Dirimu <br />
+    Sekarang
+  </h1>
+  <div class="row my-4">
+    <div class="col-md">
+      <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" />
+    </div>
+    <div class="col-md mt-4 mt-md-0">
+      <input type="text" name="jeniskelamin" id="jeniskelamin" class="form-control" placeholder="Jenis Kelamin" />
+    </div>
+  </div>
+  <div class="row my-4">
+    <div class="col-md">
+      <input type="number" name="notelp" id="notelp" class="form-control" placeholder="Nomor Telepon" />
+    </div>
+    <div class="col-md mt-4 mt-md-0">
+      <input type="date" name="tanggallahir" id="tanggallahir" class="form-control" placeholder="Tanggal Lahir" />
+    </div>
+  </div>
+  <input type="email" name="email" id="email" class="form-control my-4" placeholder="Email" />
+  <input type="file" name="cv" id="cv" class="form-control my-4 cv position-relative" placeholder="CV" />
+  <div class="text-end">
+    <button class="btn btn-maroon px-4 rounded-3 rounded-3">Submit</button>
+  </div>
+</div> -->
