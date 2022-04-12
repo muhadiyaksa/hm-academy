@@ -3,12 +3,30 @@
 }
 .btn-maroon {
   background-color: #9b2721;
-  border: 2px solid white;
+  border: 2px solid #9b2721;
+  border-radius: 7px;
+  padding: 5px 25px;
   outline: none;
   color: white;
   font-weight: 500;
   transition: 0.4s;
   width: 100%;
+}
+.btn-maroon-mirror {
+  background-color: white;
+  border: 2px solid white;
+
+  border-radius: 7px;
+  padding: 5px 25px;
+  outline: none;
+  color: #9b2721 !important;
+  font-weight: 500;
+  transition: 0.4s;
+}
+.btn-maroon-mirror:hover {
+  border: 2px solid white;
+  background-color: #9b2721;
+  color: #ffffff !important;
 }
 .waktu .btn-maroon {
   border: 2px solid #9b2721;
@@ -38,7 +56,7 @@ body {
 }
 
 .navbar .nav-item a {
-  color: #9b2721 !important;
+  color: #9b2721;
 }
 .navbar .nav-item.social img {
   max-height: 25px;
@@ -141,10 +159,10 @@ body {
   content: "";
   position: absolute;
   top: 48%;
-  left: -10px;
-  right: 10px;
+  left: -20px;
+  right: 2px;
   height: 4px;
-  background-color: #f2f2f2;
+  background-color: rgba(234, 234, 234, 0.8);
   display: block;
   z-index: 4;
 }
@@ -166,20 +184,99 @@ body {
 }
 .countdown .count .right,
 .countdown .count .left {
-  background-color: #3d3d3d;
+  background-color: #343434;
   position: absolute;
   border-radius: 10px;
   top: 0;
   bottom: 0;
   z-index: 1;
-  width: 47%;
+  width: 53%;
+  perspective: 1000px;
+  z-index: 2;
 }
 
-.countdown .count .right {
-  left: -10px;
+.countdown .count .rightelm,
+.countdown .count .leftelm {
+  background-image: linear-gradient(to top, rgb(36, 36, 36), rgb(58, 58, 58));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 52%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+  animation: second 1s infinite linear 0s;
+  transition: 0.5s;
 }
-.countdown .count .left {
-  right: 12px;
+.countdown .count span {
+  z-index: 3;
+  /* animation: flip 1s infinite linear 0s; */
+}
+.countdown .count .right,
+.countdown .count .rightelm {
+  left: -20px;
+}
+.countdown .count .left,
+.countdown .count .leftelm {
+  right: 2px;
+}
+.animation-flip {
+  animation: flip;
+  animation-duration: 0.8s;
+}
+.animation-span {
+  animation: animationSpan;
+  animation-duration: 0.8s;
+}
+@-webkit-keyframes second {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.04);
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes flip {
+  0% {
+    transform: rotateX(90deg) scale(1.1);
+  }
+  20% {
+    transform: rotateX(90deg) scale(1);
+  }
+  50% {
+    transform: rotateX(180deg) scale(1);
+  }
+  100% {
+    transform: rotateX(180deg) scale(1);
+  }
+}
+@-webkit-keyframes animationSpan {
+  from {
+    transform: rotateX(-90deg);
+  }
 }
 @media (min-width: 768px) {
   .hero .relasi {
@@ -803,23 +900,31 @@ footer p {
   font-size: 42px;
 }
 .waktu .count::after {
-  left: -10px;
-  right: 12px;
+  left: -20px;
+  right: 2px;
   height: 4px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
 }
 .waktu .count span {
   color: white;
 }
 .waktu .count .right {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
+  animation: second 1s infinite linear 0s;
 }
 .waktu .count .left {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
+  animation: second 1s infinite linear 0s;
 }
 .waktu .count p {
   color: white;
 }
 .waktu .countdown {
-  transform: translateX(10px);
+  transform: translateX(20px);
+}
+@media (min-width: 992px) {
+  .waktu .judul h1 {
+    font-size: 54px;
+  }
 }

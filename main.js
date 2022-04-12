@@ -65,6 +65,35 @@ function indicatorActive(params) {
 let countDownDate = new Date("May 15, 2022 23:30:59").getTime();
 
 // Update the count down every 1 second
+let updateDaysOne = 0;
+let updateDaysTwo = 0;
+let updateHourOne = 0;
+let updateHourTwo = 0;
+let updateMinuteOne = 0;
+let updateMinuteTwo = 0;
+
+//let element animate
+let elementFlipDayLeft = document.querySelector(".count.days .left");
+let elementFlipDayRight = document.querySelector(".count.days .right");
+let elementFlipHourLeft = document.querySelector(".count.hours .left");
+let elementFlipHourRight = document.querySelector(".count.hours .right");
+let elementFlipMinuteLeft = document.querySelector(".count.minute .left");
+let elementFlipMinuteRight = document.querySelector(".count.minute .right");
+
+let spanDayOne = document.getElementById("day-one");
+let spanDayTwo = document.getElementById("day-two");
+let spanHourOne = document.getElementById("hour-one");
+let spanHourTwo = document.getElementById("hour-two");
+let spanMinuteOne = document.getElementById("minute-one");
+let spanMinuteTwo = document.getElementById("minute-two");
+
+let spanDayOneWaktu = document.getElementById("day-one-waktu");
+let spanDayTwoWaktu = document.getElementById("day-two-waktu");
+let spanHourOneWaktu = document.getElementById("hour-one-waktu");
+let spanHourTwoWaktu = document.getElementById("hour-two-waktu");
+let spanMinuteOneWaktu = document.getElementById("minute-one-waktu");
+let spanMinuteTwoWaktu = document.getElementById("minute-two-waktu");
+
 let x = setInterval(function () {
   // Get today's date and time
   let now = new Date().getTime();
@@ -76,25 +105,73 @@ let x = setInterval(function () {
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //
+  let second = Math.floor((distance % (1000 * 60)) / 1000);
+
+  //Varibel
+  let dayOne = days.toString().length === 1 ? "0" : days.toString().split("")[0];
+  let dayTwo = days.toString().length === 1 ? days.toString().split("")[0] : days.toString().split("")[1];
+  let hourOne = hours.toString().length === 1 ? "0" : hours.toString().split("")[0];
+  let hourTwo = hours.toString().length === 1 ? hours.toString().split("")[0] : hours.toString().split("")[1];
+  let minutesOne = minutes.toString().length === 1 ? "0" : minutes.toString().split("")[0];
+  let minutesTwo = minutes.toString().length === 1 ? minutes.toString().split("")[0] : minutes.toString().split("")[1];
+  let secondOne = second.toString().length === 1 ? "0" : second.toString().split("")[0];
+  let secondTwo = second.toString().length === 1 ? second.toString().split("")[0] : second.toString().split("")[1];
 
   // Display the result in the element with id="demo"
-  document.getElementById("day-one").innerHTML = days.toString().split("")[0];
-  document.getElementById("day-two").innerHTML = days.toString().split("")[1];
-  document.getElementById("hour-one").innerHTML = hours.toString().split("")[0];
-  document.getElementById("hour-two").innerHTML = hours.toString().split("")[1];
-  document.getElementById("minute-one").innerHTML = minutes.toString().split("")[0];
-  document.getElementById("minute-two").innerHTML = minutes.toString().split("")[1];
+  document.getElementById("day-one").innerHTML = dayOne;
+  document.getElementById("day-two").innerHTML = dayTwo;
+  document.getElementById("hour-one").innerHTML = hourOne;
+  document.getElementById("hour-two").innerHTML = hourTwo;
+  document.getElementById("minute-one").innerHTML = minutesOne;
+  document.getElementById("minute-two").innerHTML = minutesTwo;
 
-  document.getElementById("day-one-waktu").innerHTML = days.toString().split("")[0];
-  document.getElementById("day-two-waktu").innerHTML = days.toString().split("")[1];
-  document.getElementById("hour-one-waktu").innerHTML = hours.toString().split("")[0];
-  document.getElementById("hour-two-waktu").innerHTML = hours.toString().split("")[1];
-  document.getElementById("minute-one-waktu").innerHTML = minutes.toString().split("")[0];
-  document.getElementById("minute-two-waktu").innerHTML = minutes.toString().split("")[1];
+  animateFlip(dayOne, updateDaysOne, elementFlipDayRight, spanDayOne);
+  animateFlip(dayTwo, updateDaysTwo, elementFlipDayLeft, spanDayTwo);
+  animateFlip(hourOne, updateHourOne, elementFlipHourRight, spanHourOne);
+  animateFlip(hourTwo, updateHourTwo, elementFlipHourLeft, spanHourTwo);
+  animateFlip(minutesOne, updateMinuteOne, elementFlipMinuteRight, spanMinuteOne);
+  animateFlip(minutesTwo, updateMinuteTwo, elementFlipMinuteLeft, spanMinuteTwo);
+  // animateFlip(secondOne, updateMinuteOne, elementFlipMinuteRight, spanMinuteOne);
+  // animateFlip(secondTwo, updateMinuteTwo, elementFlipMinuteLeft, spanMinuteTwo);
+
+  document.getElementById("day-one-waktu").innerHTML = days.toString().length === 1 ? "0" : days.toString().split("")[0];
+  document.getElementById("day-two-waktu").innerHTML = days.toString().length === 1 ? days.toString().split("")[0] : days.toString().split("")[1];
+  document.getElementById("hour-one-waktu").innerHTML = hours.toString().length === 1 ? "0" : hours.toString().split("")[0];
+  document.getElementById("hour-two-waktu").innerHTML = hours.toString().length === 1 ? hours.toString().split("")[0] : hours.toString().split("")[1];
+  document.getElementById("minute-one-waktu").innerHTML = minutes.toString().length === 1 ? "0" : minutes.toString().split("")[0];
+  document.getElementById("minute-two-waktu").innerHTML = minutes.toString().length === 1 ? minutes.toString().split("")[0] : minutes.toString().split("")[1];
+
+  animateFlip(dayOne, updateDaysOne, elementFlipDayRight, spanDayOneWaktu);
+  animateFlip(dayTwo, updateDaysTwo, elementFlipDayLeft, spanDayTwoWaktu);
+  animateFlip(hourOne, updateHourOne, elementFlipHourRight, spanHourOneWaktu);
+  animateFlip(hourTwo, updateHourTwo, elementFlipHourLeft, spanHourTwoWaktu);
+  animateFlip(minutesOne, updateMinuteOne, elementFlipMinuteRight, spanMinuteOneWaktu);
+  animateFlip(minutesTwo, updateMinuteTwo, elementFlipMinuteLeft, spanMinuteTwoWaktu);
+
+  //atur 5 nya duls
+  updateDaysOne = dayOne;
+  updateDaysTwo = dayTwo;
+  updateHourOne = hourOne;
+  updateHourTwo = hourTwo;
+  updateMinuteOne = minutesOne;
+  updateMinuteTwo = minutesTwo;
+
   // If the count down is finished, write some text
+
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+function animateFlip(params1, params2, element, span) {
+  if (+params1 !== +params2) {
+    element.classList.add("animation-flip");
+    span.classList.add("animation-span");
+    setTimeout(() => {
+      element.classList.remove("animation-flip");
+      span.classList.remove("animation-span");
+    }, 800);
+  }
+}
