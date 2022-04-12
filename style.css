@@ -8,6 +8,7 @@
   padding: 5px 25px;
   outline: none;
   color: white;
+  font-size: 16px;
   font-weight: 500;
   transition: 0.4s;
   width: 100%;
@@ -15,7 +16,7 @@
 .btn-maroon-mirror {
   background-color: white;
   border: 2px solid white;
-
+  font-size: 16px;
   border-radius: 7px;
   padding: 5px 25px;
   outline: none;
@@ -39,6 +40,12 @@
 @media (min-width: 768px) {
   .btn-maroon {
     width: auto;
+    font-size: 19px;
+  }
+  .btn-maroon-mirror {
+    font-size: 19px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 
@@ -51,10 +58,17 @@ body {
   top: 0;
   z-index: 999;
   background-color: #9b2721;
+  padding: 15px 0px;
   border-radius: 0px 0px 25px 25px;
   font-family: "Roboto", sans-serif;
 }
-
+.navbar .navbar-brand img {
+  max-height: 38px;
+}
+.navbar .navbar-toggler {
+  outline: none;
+  box-shadow: none;
+}
 .navbar .nav-item a {
   color: #9b2721;
 }
@@ -78,6 +92,7 @@ body {
   padding-top: 180px;
   padding-bottom: 150px;
   position: relative;
+  overflow: hidden;
 }
 .hero::after {
   content: "";
@@ -143,17 +158,19 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .countdown .count {
   color: white;
-  font-size: 65px;
+  font-size: 44px;
   text-align: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: auto;
   height: auto;
   position: relative;
+  transform: translateX(5px);
 }
 .countdown .count::after {
   content: "";
@@ -169,7 +186,8 @@ body {
 .countdown .count span {
   position: relative;
   z-index: 2;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
 .countdown .count p {
   position: absolute;
@@ -184,12 +202,12 @@ body {
 }
 .countdown .count .right,
 .countdown .count .left {
-  background-color: #343434;
+  background-color: #3d3d3d;
   position: absolute;
   border-radius: 10px;
   top: 0;
+  transition: 0.3s;
   bottom: 0;
-  z-index: 1;
   width: 53%;
   perspective: 1000px;
   z-index: 2;
@@ -201,20 +219,19 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 52%;
+  width: 53%;
   height: 100%;
   z-index: 1;
   border-radius: 8px;
-  animation: second 1s infinite linear 0s;
   transition: 0.5s;
+  animation: second 1s infinite linear 0s;
 }
 .countdown .count span {
   z-index: 3;
-  /* animation: flip 1s infinite linear 0s; */
 }
 .countdown .count .right,
 .countdown .count .rightelm {
-  left: -20px;
+  left: -10px;
 }
 .countdown .count .left,
 .countdown .count .leftelm {
@@ -260,22 +277,36 @@ body {
   }
 }
 @-webkit-keyframes flip {
-  0% {
-    transform: rotateX(90deg) scale(1.1);
-  }
-  20% {
-    transform: rotateX(90deg) scale(1);
-  }
-  50% {
-    transform: rotateX(180deg) scale(1);
-  }
-  100% {
-    transform: rotateX(180deg) scale(1);
+  from {
+    transform: rotateX(-90deg);
   }
 }
 @-webkit-keyframes animationSpan {
   from {
     transform: rotateX(-90deg);
+  }
+}
+@media (min-width: 375px) {
+  .countdown .count {
+    font-size: 42px;
+  }
+}
+@media (min-width: 576px) {
+  .countdown .count {
+    font-size: 65px;
+    width: 120px;
+    transform: translateX(0px);
+  }
+  .countdown .count span {
+    letter-spacing: 0.3em;
+  }
+  .countdown .count .right,
+  .countdown .count .rightelm {
+    left: -20px;
+  }
+  .countdown .count .left,
+  .countdown .count .leftelm {
+    right: 2px;
   }
 }
 @media (min-width: 768px) {
@@ -875,6 +906,7 @@ footer p {
   font-family: "Roboto", sans-serif;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 .waktu::after {
   content: "";
@@ -900,7 +932,7 @@ footer p {
   font-size: 42px;
 }
 .waktu .count::after {
-  left: -20px;
+  left: -10px;
   right: 2px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -921,7 +953,16 @@ footer p {
   color: white;
 }
 .waktu .countdown {
-  transform: translateX(20px);
+  transform: translateX(0px);
+}
+@media (min-width: 576px) {
+  .waktu .countdown {
+    transform: translateX(20px);
+  }
+  .waktu .count::after {
+    left: -20px;
+    right: 2px;
+  }
 }
 @media (min-width: 992px) {
   .waktu .judul h1 {

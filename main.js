@@ -105,7 +105,6 @@ let x = setInterval(function () {
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  //
   let second = Math.floor((distance % (1000 * 60)) / 1000);
 
   //Varibel
@@ -148,7 +147,6 @@ let x = setInterval(function () {
   animateFlip(hourTwo, updateHourTwo, elementFlipHourLeft, spanHourTwoWaktu);
   animateFlip(minutesOne, updateMinuteOne, elementFlipMinuteRight, spanMinuteOneWaktu);
   animateFlip(minutesTwo, updateMinuteTwo, elementFlipMinuteLeft, spanMinuteTwoWaktu);
-
   //atur 5 nya duls
   updateDaysOne = dayOne;
   updateDaysTwo = dayTwo;
@@ -175,3 +173,5 @@ function animateFlip(params1, params2, element, span) {
     }, 800);
   }
 }
+
+function animateWaktu() {}
