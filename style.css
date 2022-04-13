@@ -734,8 +734,10 @@ body {
   font-size: 15px;
 }
 .testimony .slider .content-slider .card-slider .image {
-  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
   min-width: 50px;
+  max-width: 50px;
   border-radius: 50%;
   background-color: #9f241f;
   overflow: hidden;
@@ -744,6 +746,7 @@ body {
 .testimony .slider .content-slider .card-slider .image img {
   height: 100%;
   width: 100%;
+  object-position: top;
   object-fit: cover;
 }
 @media (min-width: 576px) {
